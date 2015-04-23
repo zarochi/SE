@@ -44,7 +44,9 @@ success: function(response){
                         <ul >
                                 <li role="presentation" class="menu-item"><a class='a-menu' href="index.php">Home</a></li>
                                 <li role="presentation" class='menu-item'><a class='a-menu'  href="signin.php">Sign in</a></li>
-                                <li role="presentation" class='menu-item'><a class='a-menu'  href="quizer.php">Quiz</a></li>
+                                <li role="presentation" class='menu-item'><a class='a-menu'  href="quiz.php">Quiz</a></li>
+                                <li role="presentation" class='menu-item'><a class='a-menu'  href="btutorial.php">Basic Tutorial</a></li>
+                                <li role="presentation" class='menu-item'><a class='a-menu'  href="about.php">About</a></li>
                         </ul>
                 </div>
         </div>

@@ -44,7 +44,9 @@ success: function(response){
                         <ul >
                                 <li role="presentation" class="menu-item"><a class='a-menu' href="index.php">Home</a></li>
                                 <li role="presentation" class='menu-item'><a class='a-menu'  href="signin.php">Sign in</a></li>
-                                <li role="presentation" class='menu-item'><a class='a-menu'  href="index.php?mode=list_customers">Quiz</a></li>
+                                <li role="presentation" class='menu-item'><a class='a-menu'  href="quiz.php">Quiz</a></li>
+                                <li role="presentation" class='menu-item'><a class='a-menu'  href="btutorial.php">Basic Tutorial</a></li>
+                                <li role="presentation" class='menu-item'><a class='a-menu'  href="about.php">About</a></li>
                         </ul>
                 </div>
         </div>
@@ -69,11 +71,10 @@ if ($lines%6 == 0)
 		$num++;
 		$question = new question();
 	}
-	echo "<table>";
 	for ($x=0;$x<$num*4;$x++)
 	{
 		if ($x%4 == 0)
-			echo "<tr><td><b>".$array[$x]->question."</b></td></tr>";	
+			echo "<b>".$array[$x]->question."</b>";	
 		if ($x%4 == 1)
 		{
 			$selection=-1;
@@ -95,24 +96,23 @@ if ($lines%6 == 0)
 			if ($array[$x-1]->correct == $array[$x-1]->answer4)
 				$correct=4;
 			if ($correct == $selection)
-			echo "<tr><td>Answer: ".$array[$x]."</td><td>Correct</td></tr>";
+			echo "<table><tr><td>Answer: ".$array[$x]."</td><td>Correct</td></tr>";
 			else
-			echo "<tr><td>Answer: ".$array[$x]."</td><td>Incorrect</td></tr>";
+			echo "<table><tr><td>Answer: ".$array[$x]."</td><td>Incorrect</td></tr>";
 		}
 		if ($x%4 == 2)
 			if ($array[$x] <= 3)
 			echo "<tr><td>Result number answer was found on: ".$array[$x]."</td><td>Good Searching!</td></tr>";
 			else
-			echo "<tr><td>Result number answer was found on: ".$array[$x]."</td><td>Answer was found too low in the results. See here for some searching tips:<form action='index.php'><input type='submit' value='Tips'></form></td></tr>";
+			echo "<tr><td>Result number answer was found on: ".$array[$x]."</td><td>Answer was found too low in the results. See here for some searching tips:<form action='tips.php'><input type='submit' value='Tips'></form></td></tr>";
 		if ($x%4 == 3)
 			if ($array[$x] <= 500)
-			echo "<tr><td>Number results found: ".$array[$x]."</td><td>Good Searching!</td></tr>";
+			echo "<tr><td>Number results found: ".$array[$x]."</td><td>Good Searching!</td></tr></table></br>";
 			if ($array[$x] >= 501 && $array[$x] <= 1000)
-			echo "<tr><td>Number results found: ".$array[$x]."</td><td>Reasonable Searching.</td></tr>";
+			echo "<tr><td>Number results found: ".$array[$x]."</td><td>Reasonable Searching.</td></tr></table></br>";
 			if ($array[$x] >= 1001)
-			echo "<tr><td>Number results found: ".$array[$x]."</td><td>Try and lower your search results!</td></tr>";
+			echo "<tr><td>Number results found: ".$array[$x]."</td><td>Try and lower your search results!</td></tr></table></br>";
 	}
-	echo "</table>";
 }
 else
 {

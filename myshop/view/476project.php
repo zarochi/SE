@@ -44,7 +44,9 @@ success: function(response){
                         <ul >
                                 <li role="presentation" class="menu-item"><a class='a-menu' href="index.php">Home</a></li>
                                 <li role="presentation" class='menu-item'><a class='a-menu'  href="signin.php">Sign in</a></li>
-                                <li role="presentation" class='menu-item'><a class='a-menu'  href="quizer.php">Quiz</a></li>
+                                <li role="presentation" class='menu-item'><a class='a-menu'  href="quiz.php">Quiz</a></li>
+                                <li role="presentation" class='menu-item'><a class='a-menu'  href="btutorial.php">Basic Tutorial</a></li>
+                                <li role="presentation" class='menu-item'><a class='a-menu'  href="about.php">About</a></li>
                         </ul>
                 </div>
         </div>
@@ -55,8 +57,7 @@ success: function(response){
 	<form name="login" action="https://libproxy.uww.edu:9443/login?url=http://search.ebscohost.com/login.asp?profile=web" method="post" target="_blank">
         <table>
 	<h3>Hello Welcome to the Ebsco Host Online Tutorial</h3>
-
-<p>The Online Interactive Tutorial program will be used to assist students in learning how to better utilize the EBSCOhost database. Currently, students have issues efficiently searching the EBSCOhost database, and the EBSCOhost Online Interactive Tutorial program was created to help improve students efficiency while searching the database. The system has students search the database and answer questions about the data they are searching. Along-side the questions the students must also enter which result they found the answer on as well as how many results were found. The EBSCOhost Online Interactive Tutorial improves efficiency by suggesting changes to the students searches to lower search results and find answers in results listed higher on the page.</p>
+<p>Welcome to the Ebsco Host Online Tutorial. There are two different types of tutorials available. The basic tutorial walks you through the use of Ebsco Host. The Quiz can be used for an assessment of your skills. Please log into the field below, then select either basic tutorial or quiz from the navigation bar.</p>
 
 <h5>Login For Tutorial:</h5> 
 

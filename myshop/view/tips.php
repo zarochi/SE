@@ -54,36 +54,16 @@ success: function(response){
    <div class='row'><!-- middle box -->
         <div class='col-xs-10 content'><!-- right section: content -->
 	
-<form name="check" action="check.php" method="post">
-<?php
-require_once('question.php');
-$question = new question();
-$file = fopen("questions.txt", "r") or die("Cannot open question file");
-$num=0;
-$lines = count(file("questions.txt"));
-if ($lines%6 == 0)
-{
-while(($line = fgets($file)) != false)
-{
-$question->setQuestion($line);
-$question->setAnswers(fgets($file), fgets($file), fgets($file), fgets($file), fgets($file));
-$question->showQuestion();
-echo "<table><tr><td>Answer:</td><td><input type='text' name='a".$num."'></td></tr>";
-echo "<tr><td>Result answer was found on:</td><td><input type='text' name='r".$num."'></td></tr>";
-echo "<tr><td>Number results found:</td><td><input type='text' name='n".$num."'></td></tr>";
-echo "</table>";
-$num++;
-echo "</br>";
-}
-}
-else
-{
-echo "Questions file has an incorrect number of lines";
-}
-
-fclose($file);
-?>
-<input value="Submit" type="submit">
+<h3>Tips</h3>
+<ol>
+<li>Try making your search more specific. For example, instead of searching George Washington search George Washington president or George Washington memorial.</li>
+<li>Try using the Full Text and Scholarly checkboxes under the Limit your results heading.</li>
+<li>Try using the Document Type selection under the Limit your results heading in order to return only specific types of articles.</li>
+<li>Try using the Publication Type selection under the Limit your results heading in order to search a specific publication type.</li>
+<li>Try using the Advanced search for complicated and direct searches.</li>
+</ol>
+<form action="btutorial.php">
+<input type="submit" value="View Basic Tutorial">
 </form>
 
         </div><!-- end section -->

@@ -54,37 +54,11 @@ success: function(response){
    <div class='row'><!-- middle box -->
         <div class='col-xs-10 content'><!-- right section: content -->
 	
-<form name="check" action="check.php" method="post">
-<?php
-require_once('question.php');
-$question = new question();
-$file = fopen("questions.txt", "r") or die("Cannot open question file");
-$num=0;
-$lines = count(file("questions.txt"));
-if ($lines%6 == 0)
-{
-while(($line = fgets($file)) != false)
-{
-$question->setQuestion($line);
-$question->setAnswers(fgets($file), fgets($file), fgets($file), fgets($file), fgets($file));
-$question->showQuestion();
-echo "<table><tr><td>Answer:</td><td><input type='text' name='a".$num."'></td></tr>";
-echo "<tr><td>Result answer was found on:</td><td><input type='text' name='r".$num."'></td></tr>";
-echo "<tr><td>Number results found:</td><td><input type='text' name='n".$num."'></td></tr>";
-echo "</table>";
-$num++;
-echo "</br>";
-}
-}
-else
-{
-echo "Questions file has an incorrect number of lines";
-}
+	<h3>About</h3>
 
-fclose($file);
-?>
-<input value="Submit" type="submit">
-</form>
+<p>The Online Interactive Tutorial program will be used to assist students in learning how to better utilize the EBSCOhost database. Currently, students have issues efficiently searching the EBSCOhost database, and the EBSCOhost Online Interactive Tutorial program was created to help improve students efficiency while searching the database. The system has students search the database and answer questions about the data they are searching. Along-side the questions the students must also enter which result they found the answer on as well as how many results were found. The EBSCOhost Online Interactive Tutorial improves efficiency by suggesting changes to the students searches to lower search results and find answers in results listed higher on the page.</p>
+
+
 
         </div><!-- end section -->
   </div>

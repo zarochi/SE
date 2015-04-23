@@ -23,7 +23,7 @@ class question
 
 	public function showQuestion()
 	{
-		echo "<table><tr><td>".$this->question."</td></tr>";
+		echo "<table><tr><td><b>".$this->question."</b></td></tr>";
 		echo "<tr><td>A: ".$this->answer1."</td></tr>";
 		echo "<tr><td>B: ".$this->answer2."</td></tr>";
 		echo "<tr><td>C: ".$this->answer3."</td></tr>";

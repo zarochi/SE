@@ -54,38 +54,12 @@ success: function(response){
    <div class='row'><!-- middle box -->
         <div class='col-xs-10 content'><!-- right section: content -->
 	
-<form name="check" action="check.php" method="post">
-<?php
-require_once('question.php');
-$question = new question();
-$file = fopen("questions.txt", "r") or die("Cannot open question file");
-$num=0;
-$lines = count(file("questions.txt"));
-if ($lines%6 == 0)
-{
-while(($line = fgets($file)) != false)
-{
-$question->setQuestion($line);
-$question->setAnswers(fgets($file), fgets($file), fgets($file), fgets($file), fgets($file));
-$question->showQuestion();
-echo "<table><tr><td>Answer:</td><td><input type='text' name='a".$num."'></td></tr>";
-echo "<tr><td>Result answer was found on:</td><td><input type='text' name='r".$num."'></td></tr>";
-echo "<tr><td>Number results found:</td><td><input type='text' name='n".$num."'></td></tr>";
-echo "</table>";
-$num++;
-echo "</br>";
-}
-}
-else
-{
-echo "Questions file has an incorrect number of lines";
-}
 
-fclose($file);
-?>
-<input value="Submit" type="submit">
+<h3>Welcome to the quiz section of the tutorial!</h3>
+<p>Here we will assess the efficency of your searching. You will be asked a list of questions to search in the Ebsco Host database. Enter the letter of your answers in the "answer" field. After that, enter the result that you were able to find the answer on in the "result answer was found on" field. Next, enter the number of results your search generated in the "number results found" field. Finally, click the submit button on the bottom of the page to see how you did.</p>
+<form action="quizer.php">
+<input value="Start Quiz!" type="submit">
 </form>
-
         </div><!-- end section -->
   </div>
 	<div id='category-info'></div>

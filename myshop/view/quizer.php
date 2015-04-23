@@ -44,7 +44,9 @@ success: function(response){
                         <ul >
                                 <li role="presentation" class="menu-item"><a class='a-menu' href="index.php">Home</a></li>
                                 <li role="presentation" class='menu-item'><a class='a-menu'  href="signin.php">Sign in</a></li>
-                                <li role="presentation" class='menu-item'><a class='a-menu'  href="quizer.php">Quiz</a></li>
+                                <li role="presentation" class='menu-item'><a class='a-menu'  href="quiz.php">Quiz</a></li>
+                                <li role="presentation" class='menu-item'><a class='a-menu'  href="btutorial.php">Basic Tutorial</a></li>
+                                <li role="presentation" class='menu-item'><a class='a-menu'  href="about.php">About</a></li>
                         </ul>
                 </div>
         </div>
@@ -66,9 +68,9 @@ while(($line = fgets($file)) != false)
 $question->setQuestion($line);
 $question->setAnswers(fgets($file), fgets($file), fgets($file), fgets($file), fgets($file));
 $question->showQuestion();
-echo "<table><tr><td>Answer:<input type='text' name='a".$num."'></td></tr>";
-echo "<tr><td>Result answer was found on:<input type='text' name='r".$num."'></td></tr>";
-echo "<tr><td>Number results found:<input type='text' name='n".$num."'></td></tr>";
+echo "<table><tr><td>Answer:</td><td><input type='text' name='a".$num."'></td></tr>";
+echo "<tr><td>Result answer was found on:</td><td><input type='text' name='r".$num."'></td></tr>";
+echo "<tr><td>Number results found:</td><td><input type='text' name='n".$num."'></td></tr>";
 echo "</table>";
 $num++;
 echo "</br>";

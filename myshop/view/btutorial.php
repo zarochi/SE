@@ -54,37 +54,8 @@ success: function(response){
    <div class='row'><!-- middle box -->
         <div class='col-xs-10 content'><!-- right section: content -->
 	
-<form name="check" action="check.php" method="post">
-<?php
-require_once('question.php');
-$question = new question();
-$file = fopen("questions.txt", "r") or die("Cannot open question file");
-$num=0;
-$lines = count(file("questions.txt"));
-if ($lines%6 == 0)
-{
-while(($line = fgets($file)) != false)
-{
-$question->setQuestion($line);
-$question->setAnswers(fgets($file), fgets($file), fgets($file), fgets($file), fgets($file));
-$question->showQuestion();
-echo "<table><tr><td>Answer:</td><td><input type='text' name='a".$num."'></td></tr>";
-echo "<tr><td>Result answer was found on:</td><td><input type='text' name='r".$num."'></td></tr>";
-echo "<tr><td>Number results found:</td><td><input type='text' name='n".$num."'></td></tr>";
-echo "</table>";
-$num++;
-echo "</br>";
-}
-}
-else
-{
-echo "Questions file has an incorrect number of lines";
-}
 
-fclose($file);
-?>
-<input value="Submit" type="submit">
-</form>
+<p>The basic tutorial is coming soon!</p>
 
         </div><!-- end section -->
   </div>
