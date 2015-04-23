@@ -54,8 +54,26 @@ success: function(response){
    <div class='row'><!-- middle box -->
         <div class='col-xs-10 content'><!-- right section: content -->
 	
+	<form name="login" action="editor.php" method="post" >
 
-<p>Insert info here</p>
+        <table>
+
+<h5>Login to edit quiz questions:</h5> 
+
+        <tbody><tr>
+        <td>Username:</td>
+        <td><input name="user" size="20" type="text" /></td>
+        </tr>
+        <tr>
+        <td>Password:</td>
+        <td><input name="pass" size="20" type="password" /></td>
+        </tr>
+       </tbody>
+         </table>
+                                <input value="Login" type="submit" />
+        </form>
+
+
 
         </div><!-- end section -->
   </div>

@@ -55,7 +55,13 @@ success: function(response){
         <div class='col-xs-10 content'><!-- right section: content -->
 	
 
-<p>Insert info here</p>
+<!-- <p>The basic tutorial is coming soon!</p> -->
+
+<h3> 1. Go to <a href='http://library.uww.edu'>http://library.uww.edu</a></br>
+2. Click on Articles/Databases</br>
+(Insert picture here)<br>
+
+
 
         </div><!-- end section -->
   </div>

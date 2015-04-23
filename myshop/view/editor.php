@@ -53,9 +53,51 @@ success: function(response){
    </div>
    <div class='row'><!-- middle box -->
         <div class='col-xs-10 content'><!-- right section: content -->
-	
-
-<p>Insert info here</p>
+	<h3>Question Editor</h3>
+<?php
+$user=$_POST['user'];
+$pass=$_POST['pass'];
+require_once('question.php');
+$question = new question();
+$file = fopen("questions.txt", "r+") or die ("Cannot open question file");
+$num=0;
+$lines = count(file("questions.txt"));
+$questions = array();
+if ($user == "admin" || $user == "Admin")
+{
+	if ($pass == "EbscoH0stRu1es!")
+	{
+		if ($lines%6 == 0)
+		{
+			while(($line = fgets($file)) != false)
+			{
+			$question->setQuestion($line);
+			$question->setAnswers(fgets($file), fgets($file), fgets($file), fgets($file), fgets($file));
+			$question->showQuestion();
+			echo "<form action='delete.php'>";
+			echo "<table><tr><td><form action='delete.php' method='post'></td><td><input name='delete".$num."' type='submit' value='Delete'></td><td></form></td><td><form action='edit.php' method='post'></td><td><input name='edit".$num."' type='submit' value='Edit'></td><td></form></td></tr></table>";
+			array_push($questions, $question);
+			$question=new question();
+			$num++;
+			echo "</br>";
+			}
+		}
+		else
+		{
+			echo "Questions file has an incorrect number of lines.";
+		}
+	}
+	else
+	{
+		echo "Incorrect password";
+	}
+}
+else
+{
+echo "Incorrect username";
+}
+fclose($file);
+?>
 
         </div><!-- end section -->
   </div>

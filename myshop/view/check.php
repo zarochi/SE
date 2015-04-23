@@ -45,7 +45,7 @@ success: function(response){
                                 <li role="presentation" class="menu-item"><a class='a-menu' href="index.php">Home</a></li>
                                 <li role="presentation" class='menu-item'><a class='a-menu'  href="signin.php">Sign in</a></li>
                                 <li role="presentation" class='menu-item'><a class='a-menu'  href="quiz.php">Quiz</a></li>
-                                <li role="presentation" class='menu-item'><a class='a-menu'  href="btutorial.php">Basic Tutorial</a></li>
+                                <li role="presentation" class='menu-item'><a class='a-menu'  href="tutorial.php">Tutorial</a></li>
                                 <li role="presentation" class='menu-item'><a class='a-menu'  href="about.php">About</a></li>
                         </ul>
                 </div>
@@ -95,23 +95,33 @@ if ($lines%6 == 0)
 				$correct=3;
 			if ($array[$x-1]->correct == $array[$x-1]->answer4)
 				$correct=4;
-			if ($correct == $selection)
+			if ($array[$x] == null)
+			echo "<table><tr><td>Answer: ".$array[$x]."</td><td>There was no input.</td></tr>";
+			elseif ($correct == $selection)
 			echo "<table><tr><td>Answer: ".$array[$x]."</td><td>Correct</td></tr>";
 			else
 			echo "<table><tr><td>Answer: ".$array[$x]."</td><td>Incorrect</td></tr>";
 		}
 		if ($x%4 == 2)
-			if ($array[$x] <= 3)
+		{
+			if ($array[$x] == null)
+			echo "<tr><td>Result number answer was found on: ".$array[$x]."</td><td>There was no input.</td></tr>";
+			elseif ($array[$x] <= 3)
 			echo "<tr><td>Result number answer was found on: ".$array[$x]."</td><td>Good Searching!</td></tr>";
 			else
 			echo "<tr><td>Result number answer was found on: ".$array[$x]."</td><td>Answer was found too low in the results. See here for some searching tips:<form action='tips.php'><input type='submit' value='Tips'></form></td></tr>";
+		}
 		if ($x%4 == 3)
-			if ($array[$x] <= 500)
+		{
+			if ($array[$x] == null)
+			echo "<tr><td>Number results found: ".$array[$x]."</td><td>There was no input.</td></tr></table></br>";
+			elseif ($array[$x] <= 500)
 			echo "<tr><td>Number results found: ".$array[$x]."</td><td>Good Searching!</td></tr></table></br>";
-			if ($array[$x] >= 501 && $array[$x] <= 1000)
+			elseif ($array[$x] >= 501 && $array[$x] <= 1000)
 			echo "<tr><td>Number results found: ".$array[$x]."</td><td>Reasonable Searching.</td></tr></table></br>";
-			if ($array[$x] >= 1001)
+			elseif ($array[$x] >= 1001)
 			echo "<tr><td>Number results found: ".$array[$x]."</td><td>Try and lower your search results!</td></tr></table></br>";
+		}
 	}
 }
 else

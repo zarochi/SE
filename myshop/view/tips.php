@@ -45,7 +45,7 @@ success: function(response){
                                 <li role="presentation" class="menu-item"><a class='a-menu' href="index.php">Home</a></li>
                                 <li role="presentation" class='menu-item'><a class='a-menu'  href="signin.php">Sign in</a></li>
                                 <li role="presentation" class='menu-item'><a class='a-menu'  href="quiz.php">Quiz</a></li>
-                                <li role="presentation" class='menu-item'><a class='a-menu'  href="btutorial.php">Basic Tutorial</a></li>
+                                <li role="presentation" class='menu-item'><a class='a-menu'  href="tutorial.php">Tutorial</a></li>
                                 <li role="presentation" class='menu-item'><a class='a-menu'  href="about.php">About</a></li>
                         </ul>
                 </div>
@@ -62,8 +62,8 @@ success: function(response){
 <li>Try using the Publication Type selection under the Limit your results heading in order to search a specific publication type.</li>
 <li>Try using the Advanced search for complicated and direct searches.</li>
 </ol>
-<form action="btutorial.php">
-<input type="submit" value="View Basic Tutorial">
+<form action="tutorial.php">
+<input type="submit" value="View Tutorial">
 </form>
 
         </div><!-- end section -->

@@ -45,7 +45,7 @@ success: function(response){
                                 <li role="presentation" class="menu-item"><a class='a-menu' href="index.php">Home</a></li>
                                 <li role="presentation" class='menu-item'><a class='a-menu'  href="signin.php">Sign in</a></li>
                                 <li role="presentation" class='menu-item'><a class='a-menu'  href="quiz.php">Quiz</a></li>
-                                <li role="presentation" class='menu-item'><a class='a-menu'  href="btutorial.php">Basic Tutorial</a></li>
+                                <li role="presentation" class='menu-item'><a class='a-menu'  href="tutorial.php">Tutorial</a></li>
                                 <li role="presentation" class='menu-item'><a class='a-menu'  href="about.php">About</a></li>
                         </ul>
                 </div>
@@ -57,7 +57,7 @@ success: function(response){
 	<form name="login" action="https://libproxy.uww.edu:9443/login?url=http://search.ebscohost.com/login.asp?profile=web" method="post" target="_blank">
         <table>
 	<h3>Hello Welcome to the Ebsco Host Online Tutorial</h3>
-<p>Welcome to the Ebsco Host Online Tutorial. There are two different types of tutorials available. The basic tutorial walks you through the use of Ebsco Host. The Quiz can be used for an assessment of your skills. Please log into the field below, then select either basic tutorial or quiz from the navigation bar.</p>
+<p>Welcome to the Ebsco Host Online Tutorial. There are two different types of tutorials available. The tutorial walks you through the use of Ebsco Host. The Quiz can be used for an assessment of your skills. Please log into the field below, then select either basic tutorial or quiz from the navigation bar.</p>
 
 <h5>Login For Tutorial:</h5> 
 
