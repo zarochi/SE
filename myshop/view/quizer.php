@@ -75,6 +75,7 @@ echo "</table>";
 $num++;
 echo "</br>";
 }
+echo "<input value='Submit' type='submit'>";
 }
 else
 {
@@ -83,7 +84,6 @@ echo "Questions file has an incorrect number of lines";
 
 fclose($file);
 ?>
-<input value="Submit" type="submit">
 </form>
 
         </div><!-- end section -->

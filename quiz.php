@@ -60,6 +60,9 @@ success: function(response){
 <form action="quizer.php">
 <input value="Start Quiz!" type="submit">
 </form>
+<form action="authenticate.php">
+<input value="Administrator login" type="submit">
+</form>
         </div><!-- end section -->
   </div>
 	<div id='category-info'></div>

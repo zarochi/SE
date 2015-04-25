@@ -53,53 +53,17 @@ success: function(response){
    </div>
    <div class='row'><!-- middle box -->
         <div class='col-xs-10 content'><!-- right section: content -->
-	<h3>Question Editor</h3>
-<?php
-$user=$_POST['user'];
-$pass=$_POST['pass'];
-require_once('question.php');
-$question = new question();
-$file = fopen("questions.txt", "r+") or die ("Cannot open question file");
-$num=0;
-$lines = count(file("questions.txt"));
-$questions = array();
-if ($user == "admin" || $user == "Admin")
-{
-	if ($pass == "EbscoH0stRu1es!")
-	{
-		if ($lines%6 == 0)
-		{
-			while(($line = fgets($file)) != false)
-			{
-			$question->setQuestion($line);
-			$question->setAnswers(fgets($file), fgets($file), fgets($file), fgets($file), fgets($file));
-			$question->showQuestion();
-			echo "<table><tr><td><form action='delete.php' method='post'></td><td><input name='delete".$num."' type='submit' value='Delete'></td><td></form></td></tr></table>";
-			array_push($questions, $question);
-			$question=new question();
-			$num++;
-			echo "</br>";
-			}
-			echo "<form action='add.php'>";
-			echo "<input type='submit' value='Add Question'>";
-			echo "</form>";
-		}
-		else
-		{
-			echo "Questions file has an incorrect number of lines.";
-		}
-	}
-	else
-	{
-		echo "Incorrect password";
-	}
-}
-else
-{
-echo "Incorrect username";
-}
-fclose($file);
-?>
+	
+<form action="append.php" method="post">
+<table><tr><td>Question:</td><td><input type="text" name="question"></td></tr>
+<tr><td>Answer 1:</td><td><input type="text" name="a1"></td></tr>
+<tr><td>Answer 2:</td><td><input type="text" name="a2"></td></tr>
+<tr><td>Answer 3:</td><td><input type="text" name="a3"></td></tr>
+<tr><td>Answer 4:</td><td><input type="text" name="a4"></td></tr>
+<tr><td>Number of correct answer:</td><td><input type="text" name="correct"></td></tr>
+<tr><td><input type='submit' value='Add question'></td></tr></table>
+</form>
+
 
         </div><!-- end section -->
   </div>

@@ -74,13 +74,15 @@ if ($user == "admin" || $user == "Admin")
 			$question->setQuestion($line);
 			$question->setAnswers(fgets($file), fgets($file), fgets($file), fgets($file), fgets($file));
 			$question->showQuestion();
-			echo "<form action='delete.php'>";
-			echo "<table><tr><td><form action='delete.php' method='post'></td><td><input name='delete".$num."' type='submit' value='Delete'></td><td></form></td><td><form action='edit.php' method='post'></td><td><input name='edit".$num."' type='submit' value='Edit'></td><td></form></td></tr></table>";
+			echo "<table><tr><td><form action='delete.php' method='post'></td><td><input name='delete".$num."' type='submit' value='Delete'></td><td></form></td></tr></table>";
 			array_push($questions, $question);
 			$question=new question();
 			$num++;
 			echo "</br>";
 			}
+			echo "<form action='add.php'>";
+			echo "<input type='submit' value='Add Question'>";
+			echo "</form>";
 		}
 		else
 		{

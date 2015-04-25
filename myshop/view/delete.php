@@ -54,8 +54,53 @@ success: function(response){
    <div class='row'><!-- middle box -->
         <div class='col-xs-10 content'><!-- right section: content -->
 	
-
-<p>Insert info here</p>
+<?php
+foreach($_POST as $key=>$value)
+{
+	$index=substr($key, 6);
+}
+require_once('question.php');
+$file = fopen("questions.txt", "r+") or die("Cannot open question file");
+$num=0;
+$lines=count(file("questions.txt"));
+$question = new question();
+$array = array();
+if ($lines%6 == 0)
+{
+	while(($line = fgets($file)) != false)
+	{
+		$question->setQuestion($line);
+		$question->setAnswers(fgets($file), fgets($file), fgets($file), fgets($file), fgets($file));
+		array_push($array, $question);
+		$num++;
+		$question = new question();
+	}
+unset($array[$index]);
+rename("questions.txt", "questions.txt.lastbackup");
+fclose($file);
+$file = fopen("questions.txt", "w") or die("Cannot open question file");
+for($x=0;$x<$num;$x++)
+{
+	if ($x != $index)
+	{
+		fwrite($file, $array[$x]->question);
+		fwrite($file, $array[$x]->answer1);
+		fwrite($file, $array[$x]->answer2);
+		fwrite($file, $array[$x]->answer3);
+		fwrite($file, $array[$x]->answer4);
+		fwrite($file, $array[$x]->correct);
+	}
+}
+echo "Question deleted successfully.";
+echo "<form action='authenticate.php'>";
+echo "<input value='Back to editor' type='submit'>";
+echo "</form>";
+}
+else
+{
+	echo "Questions file has an incorrect number of lines";
+}
+?>
 
         </div><!-- end section -->
   </div>
