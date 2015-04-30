@@ -54,23 +54,23 @@ success: function(response){
    <div class='row'><!-- middle box -->
         <div class='col-xs-10 content'><!-- right section: content -->
 	
-<h3>Welcome to the EBSCO host tutorial!</h3>
-<h5>This first section will show you how to select a database. Please follow the steps below to select and search the PsycARTICLES database.</h5>
+<h4>This section will teach you how to search the databases you have selected.</h4>
 <ol>
-<li>Select P at the top of the page.</li>
-<img src="selectingP.png">
-<li>Scroll down the page until you reach the PsycARTICLES option, and click on PsycARTICLES.</li>
-<img src="SelectingArticles.png">
-<li>You will be taken to a search page where you can search the PsycARTICLES database. Above the search bar EBSCO host will show you which database you are searching.</li>
-<img src="searchbar.png">
-<li>You can also select multiple databases to search. Click the choose databases hyperlink above the search bar.</li>
-<img src="choosedatabases.png">
-<li>You will notice that there are a large number of databases. Scroll down the page until you reach the PsycInfo database, and click the checkbox next to it. After that, click ok at the top or bottom of the page, and you will be able to search both databases at the same time!</li>
-<img src="selectpsychinfo.png">
+<li>Start by pasting this entire question into the search box: Does bulling affect teenagers' decisions about substance use, and what are some of the best practices or interventions in this area?</li>
+<img src="search1.png">
+</br></br>You will notice that we have a reasonably large number of results, and none of them are really relevant to what we are looking for.</br></br>
+<li>Let's try to narrow our results and get more relevant articles. <b>Keywords</b> help us find the information we are looking for more easily. Try entering: bullying substance use.</li>
+<img src="search2.png">
+</br></br>You will notice that we have far fewer results this time, and that our results are much more relevant to what we are looking for.</br></br>
+<li>Now try searching Bull*.</li>
+<img src="search4.png">
+</br></br>You will notice that we have a very large number of results, but this is a good way to get randomized articles relating to bullying.</br></br>
+<li>Now try searching: Bull* substance use.</li>
+<img src="search3.png">
+You will notice that we have a few more results than when we searched bullying substance abuse. This is an even better search because it will also get articles that contain bullied and bully while keeping your results low.
 </ol>
-
-Click continue to learn about searching with EBSCO host.</br>
-<a href="searching.php">Continue</a>
+Click continue to view the tutorial for advanced searching</br>
+<a href="advanced.php">Continue</a>
 
         </div><!-- end section -->
   </div>

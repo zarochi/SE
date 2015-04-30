@@ -54,14 +54,23 @@ success: function(response){
    <div class='row'><!-- middle box -->
         <div class='col-xs-10 content'><!-- right section: content -->
 	
+<h3>Welcome to the EBSCO host tutorial!</h3>
+<h5>This first section will show you how to select a database. Please follow the steps below to select and search the PsycARTICLES database.</h5>
+<ol>
+<li>Select P at the top of the page.</li>
+<img src="selectingP.png">
+<li>Scroll down the page until you reach the PsycARTICLES option, and click on PsycARTICLES.</li>
+<img src="SelectingArticles.png">
+<li>You will be taken to a search page where you can search the PsycARTICLES database. Above the search bar EBSCO host will show you which database you are searching.</li>
+<img src="searchbar.png">
+<li>You can also select multiple databases to search. Click the choose databases hyperlink above the search bar.</li>
+<img src="choosedatabases.png">
+<li>You will notice that there are a large number of databases. Scroll down the page until you reach the PsycInfo database, and click the checkbox next to it. After that, click ok at the top or bottom of the page, and you will be able to search both databases at the same time!</li>
+<img src="selectpsychinfo.png">
+</ol>
 
-<!-- <p>The basic tutorial is coming soon!</p> -->
-
-<h3> 1. Go to <a href='http://library.uww.edu'>http://library.uww.edu</a></br>
-2. Click on Articles/Databases</br>
-(Insert picture here)<br>
-
-
+Click continue to learn about searching with EBSCO host.</br>
+<a href="searching.php">Continue</a>
 
         </div><!-- end section -->
   </div>
