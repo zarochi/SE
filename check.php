@@ -106,6 +106,8 @@ if ($lines%6 == 0)
 		{
 			if ($array[$x] == null)
 			echo "<tr><td>Result number answer was found on: ".$array[$x]."</td><td>There was no input.</td></tr>";
+			elseif (! is_int($array[$x]) || $array[$x]<1)
+			echo "<tr><td>Result number answer was found on: ".$array[$x]."</td><td>Value entered is not valid</td></tr>";
 			elseif ($array[$x] <= 3)
 			echo "<tr><td>Result number answer was found on: ".$array[$x]."</td><td>Good Searching!</td></tr>";
 			else
@@ -115,6 +117,8 @@ if ($lines%6 == 0)
 		{
 			if ($array[$x] == null)
 			echo "<tr><td>Number results found: ".$array[$x]."</td><td>There was no input.</td></tr></table></br>";
+			elseif (! is_int($array[$x]) || $array[$x]<1)
+			echo "<tr><td>Number results found: ".$array[$x]."</td><td>Value entered is not valid.</td></tr></table></br>";
 			elseif ($array[$x] <= 500)
 			echo "<tr><td>Number results found: ".$array[$x]."</td><td>Good Searching!</td></tr></table></br>";
 			elseif ($array[$x] >= 501 && $array[$x] <= 1000)

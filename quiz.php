@@ -56,7 +56,7 @@ success: function(response){
 	
 
 <h3>Welcome to the quiz section of the tutorial!</h3>
-<p>Here we will assess the efficency of your searching. You will be asked a list of questions to search in the Ebsco Host database. Enter the letter of your answers in the "answer" field. After that, enter the result that you were able to find the answer on in the "result answer was found on" field. Next, enter the number of results your search generated in the "number results found" field. Finally, click the submit button on the bottom of the page to see how you did.</p>
+<p>Here we will assess the efficency of your searching. You will be asked a list of questions to search in the Ebsco Host database. Enter the letter of your answers in the "answer" field. After that, in the "result answer was found on" field enter the number of the result in which you were able to find the answer. Next, enter the number of results your search generated in the "number results found" field. Finally, click the submit button on the bottom of the page to see how you did.</p>
 <form action="quizer.php">
 <input value="Start Quiz!" type="submit">
 </form>
